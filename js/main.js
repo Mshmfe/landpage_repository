@@ -624,11 +624,16 @@ document.addEventListener('DOMContentLoaded', function() {
         visitorTextElement.textContent = 'Visitor Count'; // النص بالإنجليزية
     }
 
-    // إضافة استرجاع قيمة currentLanguage من localStorage عند تحميل الصفحة.
-    currentLanguage = localStorage.getItem('language') || 'en';
-
-    // إضافة وظيفة JavaScript لدعم القائمة المنسدلة لزر تسجيل الدخول الموجود.
-    console.log(currentLanguage); // تحقق من قيمة currentLanguage
+    // تعيين النصوص في القائمة المنسدلة
+    const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+    dropdownLinks.forEach(link => {
+        const translationKey = link.getAttribute('data-translate');
+        if (translations[translationKey]) {
+            link.textContent = translations[translationKey][currentLanguage];
+        } else {
+            console.warn(`Translation key ${translationKey} not found`);
+        }
+    });
 
     // Add event listener for login button to toggle dropdown
     const loginButton = document.getElementById('loginButton');
@@ -663,74 +668,22 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = page;
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        currentLanguage = localStorage.getItem('language') || 'en';
+    function updateVisitorText() {
+        const visitorTextElement = document.getElementById('visitorText');
+        if (currentLanguage === 'ar') {
+            visitorTextElement.textContent = 'عدد الزوار'; // النص بالعربية
+        } else {
+            visitorTextElement.textContent = 'Visitor Count'; // النص بالإنجليزية
+        }
+    }
 
-        // تعيين النصوص في القائمة المنسدلة
-        const dropdownLinks = document.querySelectorAll('.dropdown-content a');
-        dropdownLinks.forEach(link => {
-            const translationKey = link.getAttribute('data-translate');
-            if (translations[translationKey]) {
-                link.textContent = translations[translationKey][currentLanguage];
-            } else {
-                console.warn(`Translation key ${translationKey} not found`);
-            }
-        });
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    let count = parseInt(localStorage.getItem('visitorCount')) || 0;
-    count++; // زيادة العدد بمقدار واحد
-    localStorage.setItem('visitorCount', count);
-    const visitorCountElement = document.getElementById('visitorCount');
-    const visitorTextElement = document.getElementById('visitorText');
-
-    // استرجاع اللغة الحالية
-    currentLanguage = localStorage.getItem('language') || 'en';
-
-    // تحديث العدد
-    visitorCountElement.textContent = count;
-
-    // إظهار النص المناسب بناءً على اللغة
-    if (currentLanguage === 'ar') {
-        visitorTextElement.textContent = 'عدد الزوار'; // النص بالعربية
-    } else {
-        visitorTextElement.textContent = 'Visitor Count'; // النص بالإنجليزية
+    // يمكنك إضافة وظيفة لتغيير اللغة هنا
+    function changeLanguage(language) {
+        currentLanguage = language;
+        localStorage.setItem('language', currentLanguage);
+        updateVisitorText(); // تحديث النص عند تغيير اللغة
+        updateContent(); // تحديث المحتوى عند تغيير اللغة
+        updateTextDirection(); // تحديث اتجاه النص عند تغيير اللغة
+        updateButtonText(); // تحديث نص الزر عند تغيير اللغة
     }
 });
-
-function updateVisitorText() {
-    const visitorTextElement = document.getElementById('visitorText');
-    if (currentLanguage === 'ar') {
-        visitorTextElement.textContent = 'عدد الزوار'; // النص بالعربية
-    } else {
-        visitorTextElement.textContent = 'Visitor Count'; // النص بالإنجليزية
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    let count = parseInt(localStorage.getItem('visitorCount')) || 0;
-    count++; // زيادة العدد بمقدار واحد
-    localStorage.setItem('visitorCount', count);
-    const visitorCountElement = document.getElementById('visitorCount');
-
-    // استرجاع اللغة الحالية
-    currentLanguage = localStorage.getItem('language') || 'en';
-
-    // تحديث العدد
-    visitorCountElement.textContent = count;
-
-    // تحديث النص بناءً على اللغة
-    updateVisitorText();
-});
-
-// يمكنك إضافة وظيفة لتغيير اللغة هنا
-function changeLanguage(language) {
-    currentLanguage = language;
-    localStorage.setItem('language', currentLanguage);
-    updateVisitorText(); // تحديث النص عند تغيير اللغة
-    updateContent(); // تحديث المحتوى عند تغيير اللغة
-    updateTextDirection(); // تحديث اتجاه النص عند تغيير اللغة
-    updateButtonText(); // تحديث نص الزر عند تغيير اللغة
-}
