@@ -606,10 +606,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add visitor count functionality
     let count = parseInt(localStorage.getItem('visitorCount')) || 0;
-    if (count === 0) {
-        count++;
-        localStorage.setItem('visitorCount', count);
-    }
+    count++; // زيادة العدد بمقدار واحد
+    localStorage.setItem('visitorCount', count);
     const visitorCountElement = document.getElementById('visitorCount');
     const visitorTextElement = document.getElementById('visitorText');
 
@@ -683,10 +681,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     let count = parseInt(localStorage.getItem('visitorCount')) || 0;
-    if (count === 0) {
-        count++;
-        localStorage.setItem('visitorCount', count);
-    }
+    count++; // زيادة العدد بمقدار واحد
+    localStorage.setItem('visitorCount', count);
     const visitorCountElement = document.getElementById('visitorCount');
     const visitorTextElement = document.getElementById('visitorText');
 
@@ -715,10 +711,8 @@ function updateVisitorText() {
 
 document.addEventListener('DOMContentLoaded', function() {
     let count = parseInt(localStorage.getItem('visitorCount')) || 0;
-    if (count === 0) {
-        count++;
-        localStorage.setItem('visitorCount', count);
-    }
+    count++; // زيادة العدد بمقدار واحد
+    localStorage.setItem('visitorCount', count);
     const visitorCountElement = document.getElementById('visitorCount');
 
     // استرجاع اللغة الحالية
