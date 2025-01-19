@@ -858,3 +858,30 @@ footer a:hover {
     background: var(--primary-color);
     color: var(--white);
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 10px 0; /* إضافة مسافة بين الحدود والقائمة المنسدلة */
+    padding: 10px 0; /* إضافة padding للقائمة المنسدلة */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center; /* Align text to the center for both languages */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content.en a {
+    text-align: left; /* Align text to the left for English */
+}
