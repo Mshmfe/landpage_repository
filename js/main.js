@@ -559,6 +559,7 @@ function toggleLanguage() {
     updateTextDirection();
     updateContent();
     updateButtonText();
+    toggleLanguageText();
 }
 
 // Update button text
@@ -594,6 +595,20 @@ function updateContent() {
     });
 }
 
+// Function to toggle language text
+function toggleLanguageText(language) {
+    const arabicElements = document.querySelectorAll('.ar');
+    const englishElements = document.querySelectorAll('.en');
+
+    if (language === 'ar') {
+        arabicElements.forEach(el => el.style.display = 'inline');
+        englishElements.forEach(el => el.style.display = 'none');
+    } else {
+        arabicElements.forEach(el => el.style.display = 'none');
+        englishElements.forEach(el => el.style.display = 'inline');
+    }
+}
+
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     // Set initial language from localStorage or default to 'en'
@@ -604,25 +619,35 @@ document.addEventListener('DOMContentLoaded', function() {
     updateContent();
     updateButtonText();
 
-    // Add visitor count functionality
-    let count = parseInt(localStorage.getItem('visitorCount')) || 0;
-    count++; // زيادة العدد بمقدار واحد
-    localStorage.setItem('visitorCount', count);
-    const visitorCountElement = document.getElementById('visitorCount');
-    const visitorTextElement = document.getElementById('visitorText');
+    // Add counter functionality
+    const targetNumber = 92000; // الرقم المستهدف
+    const duration = 10000; // مدة الحركة (بالميلي ثانية)
+    const dynamicCounterElement = document.getElementById('dynamicCounter');
 
-    // استرجاع اللغة الحالية
-    currentLanguage = localStorage.getItem('language') || 'en';
-
-    // تحديث العدد
-    visitorCountElement.textContent = count;
-
-    // إظهار النص المناسب بناءً على اللغة
-    if (currentLanguage === 'ar') {
-        visitorTextElement.textContent = 'عدد الزوار'; // النص بالعربية
-    } else {
-        visitorTextElement.textContent = 'Visitor Count'; // النص بالإنجليزية
+    // التحقق من وجود العنصر
+    if (!dynamicCounterElement) {
+        console.error('Dynamic counter element not found!');
+        return;
     }
+
+    let currentNumber = 0; // الرقم الحالي
+    const increment = Math.ceil(targetNumber / (duration / 100)); // مقدار الزيادة في كل خطوة
+
+    const updateCounter = () => {
+        console.log('Updating counter...'); // تسجيل بدء تحديث العداد
+        currentNumber += increment;
+        if (currentNumber >= targetNumber) {
+            currentNumber = targetNumber; // التأكد من الوصول للرقم المستهدف
+            dynamicCounterElement.textContent = currentNumber.toLocaleString(); // تحديث الرقم المعروض مع التنسيق
+            updateVisitorText(); // تحديث النص بناءً على اللغة
+            console.log('Counter updated to:', currentNumber); // تسجيل الرقم المحدث
+            return; // إنهاء الدالة
+        }
+        dynamicCounterElement.textContent = currentNumber.toLocaleString(); // تحديث الرقم المعروض مع التنسيق
+        requestAnimationFrame(updateCounter); // استدعاء الدالة مرة أخرى
+    };
+
+    requestAnimationFrame(updateCounter); // بدء العداد
 
     // تعيين النصوص في القائمة المنسدلة
     const dropdownLinks = document.querySelectorAll('.dropdown-content a');
@@ -670,6 +695,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateVisitorText() {
         const visitorTextElement = document.getElementById('visitorText');
+        if (!visitorTextElement) {
+            console.error('Element with id visitorText not found!');
+            return;
+        }
         if (currentLanguage === 'ar') {
             visitorTextElement.textContent = 'عدد الزوار'; // النص بالعربية
         } else {
