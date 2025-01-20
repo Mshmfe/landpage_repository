@@ -34,7 +34,14 @@
                 </ul>
                 <div class="d-flex">
                     <button class="btn btn-outline-primary ms-2" onclick="toggleLanguage()">عربي</button>
-                    <a href="https://tabuk-csm.symplicity.com/" target="_blank" class="btn btn-primary nav-login" data-translate="nav-login">Login</a>
+                    <div class="dropdown">
+                        <button id="loginButton" class="btn btn-primary" type="button" data-translate="nav-login">تسجيل الدخول</button>
+                        <div id="loginOptions" class="dropdown-content">
+                            <a href="https://tabuk-csm.symplicity.com/students/index.php?signin_tab=0" data-translate="students-graduates" target="_blank" rel="noopener noreferrer">الطلاب / خريجون</a>
+                            <a href="https://tabuk-csm.symplicity.com/faculty/index.php?signin_tab=0" data-translate="faculty" target="_blank" rel="noopener noreferrer">أعضاء هيئة التدريس</a>
+                            <a href="https://tabuk-csm.symplicity.com/employers/index.php?signin_tab=0" data-translate="companies" target="_blank" rel="noopener noreferrer">شركات</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
