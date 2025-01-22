@@ -135,17 +135,23 @@ body.ltr .me-auto {
 }
 
 .partner-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    height: 100%;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    width: 200px; /* Set a fixed width for the cards */
+    height: 200px; /* Set a fixed height for the cards */
+    margin: 10px; /* Add margin for spacing */
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    border-radius: 50%; /* Make the card circular */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: white; /* Ensure background is white for all cards */
+}
+
+.partner-card img {
+    width: 100%; /* Fill card width */
+    height: 100%; /* Fill card height */
+    object-fit: cover; /* Cover the card area without distortion */
+    border-radius: 0; /* Remove circular shape from images */
 }
 
 .partner-card:hover {
@@ -211,6 +217,25 @@ body.ltr .me-auto {
     font-size: 1.1rem;
     margin: 0;
     color: var(--primary-color);
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.partners-wrapper {
+  display: flex;
+  animation: scroll 10s linear infinite; /* Continuous circular movement */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Adjust this to control how far it scrolls */
+  }
 }
 
 .carousel-control-prev,
@@ -949,7 +974,7 @@ h2, p {
 
 .lead {
     font-size: 20px;
-    color: #555; /* لون نص مريح */
+    color: #ffffff; /* لون نص مريح */
     margin-bottom: 20px;
 }
 
@@ -965,4 +990,16 @@ h2, p {
 
 .button:hover {
     background-color: var(--primary-dark);
+}
+
+.platform-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    margin-top: 20px; /* Space above the icons */
+}
+
+.platform-icon {
+    width: 130px; /* Icon width */
+    height: 40px; /* Icon height */
+    margin: 0 10px; /* Space between icons */
 }

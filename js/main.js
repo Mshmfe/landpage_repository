@@ -18,11 +18,11 @@ const translations = {
     },
     'hero-title': {
         'en': 'Training & Employment Platform',
-        'ar': 'منصة التدريب والتوظيف'
+        'ar': 'منصة جامعة تبوك للتدريب و التوظيف'
     },
     'hero-subtitle': {
         'en': 'Your gateway to training and employment opportunities at University of Tabuk',
-        'ar': 'بوابتك لفرص التدريب والتوظيف في جامعة تبوك'
+        'ar': 'هي بوابتك لفرص التدريب والتوظيف في سوق العمل '
     },
     'learn-more': {
         'en': 'Learn More',
@@ -510,7 +510,7 @@ const translations = {
     },
     'students-graduates': {
         'en': 'Students / Alumni',
-        'ar': 'الطلاب / خريجون'
+        'ar': 'الطلبة / خريجون'
     },
     'faculty': {
         'en': 'Faculty Members',
@@ -705,6 +705,46 @@ document.addEventListener('DOMContentLoaded', function() {
             visitorTextElement.textContent = 'Visitor Count'; // النص بالإنجليزية
         }
     }
+
+    // Circular Scrolling Carousel for Partners Section
+    const partnersCarousel = document.querySelector('.partners-wrapper');
+    const partnerCards = partnersCarousel.children;
+    let currentIndex = 0;
+    const totalCards = partnerCards.length;
+
+    // Duplicate the first few cards to create a seamless effect
+    for (let i = 0; i < totalCards; i++) {
+        const clone = partnerCards[i].cloneNode(true);
+        partnersCarousel.appendChild(clone);
+    }
+
+    function updateCarousel() {
+        const offset = -currentIndex * partnerCards[0].clientWidth;
+        partnersCarousel.style.transition = 'transform 0.5s ease';
+        partnersCarousel.style.transform = `translateX(${offset}px)`;
+        currentIndex++;
+        if (currentIndex >= totalCards) {
+            currentIndex = 0;
+        }
+    }
+
+    setInterval(updateCarousel, 3000); // Change image every 3 seconds
+
+    // Automatic Carousel for Partners Section
+    const partnersCarouselAuto = document.querySelector('.partners-wrapper');
+    const partnerCardsAuto = partnersCarouselAuto.children;
+    let currentIndexAuto = 0;
+
+    function updateCarouselAuto() {
+        currentIndexAuto = (currentIndexAuto + 1) % partnerCardsAuto.length;
+        const offset = -currentIndexAuto * partnerCardsAuto[0].clientWidth;
+        partnersCarouselAuto.style.transform = `translateX(${offset}px)`;
+    }
+
+    setInterval(updateCarouselAuto, 3000); // Change image every 3 seconds
+
+    // Initialize the carousel with the first image
+    updateCarouselAuto();
 
     // يمكنك إضافة وظيفة لتغيير اللغة هنا
     function changeLanguage(language) {
