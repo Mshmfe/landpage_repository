@@ -5,8 +5,8 @@ const translations = {
         'ar': 'الرئيسية'
     },
     'nav-about': {
-        'en': 'About Us',
-        'ar': 'من نحن'
+        'en': 'User Guide',
+        'ar': 'الدليل الإرشادي'
     },
     'nav-services': {
         'en': 'Our Services',
@@ -329,8 +329,8 @@ const translations = {
         'ar': 'عن منصتنا'
     },
     'about-subtitle': {
-        'en': 'Learn more about our mission to connect students with opportunities',
-        'ar': 'تعرف على مهمتنا في ربط الطلاب بالفرص'
+        'en': 'Learn more about our mission to connect students And Alumni with opportunities',
+        'ar': 'تعرف على مهمتنا في ربط الطلاب والخريجين بالفرص'
     },
     'about-mission-title': {
         'en': 'Our Mission',
@@ -521,9 +521,140 @@ const translations = {
         'ar': 'شركات'
     },
     'visitor_count': {
-        'en': 'Visitor Count: ',
-        'ar': 'عدد الزوار: '
+        'en': 'Number of Registrants ',
+        'ar': 'عدد المسجلين '
+    },
+    'app-title': {
+        'en': 'The platform is in your hands, with ease and comfort',
+        'ar': 'المنصة بين يديك، بكل سهولة وراحة'
+    },
+    'app-description': {
+        'en': 'With our platform app, everything is at your fingertips! The platform will be your constant companion.',
+        'ar': 'مع تطبيق منصتنا، كل شيء أصبح في متناول يدك! المنصة ستكون رفيقك الدائم.'
+    },
+    'app-enjoy': {
+        'en': 'Enjoy using the platform through the app.',
+        'ar': 'استمتع بتجربة استخدام المنصة من خلال التطبيق.'
+    },
+    'video-title': {
+        'en': 'Are you looking for a new start to your career?',
+        'ar': 'هل تبحث عن انطلاقة جديدة لمسيرتك المهنية؟'
+    },
+    'video-subtitle': {
+        'en': 'The University of Tabuk Training and Employment Platform is your partner in the journey of search.',
+        'ar': 'منصة جامعة تبوك للتدريب و التوظيف هي شريكك في رحلة البحث'
+    },
+    'video-not-supported': {
+        'en': 'Your browser does not support the video tag.',
+        'ar': 'متصفحك لا يدعم تشغيل الفيديو.'
+    },
+    'partners-title': {
+        'en': 'Our Partners',
+        'ar': 'شركاؤنا'
+    },
+    'partner1-tab': {
+        'en': 'NEOM',
+        'ar': 'نيوم'
+    },
+    'partner1-title': {
+        'en': 'NEOM',
+        'ar': 'نيوم'
+    },
+    'partner1-description': {
+        'en': 'Description about NEOM. This can include information about projects and achievements.',
+        'ar': 'وصف عن شركة NEOM. يمكن أن يتضمن هذا معلومات حول المشاريع والإنجازات.'
+    },
+    'partner2-tab': {
+        'en': 'Tabuk Pharma',
+        'ar': 'تبوك الدوائية '
+    },
+    'partner2-title': {
+        'en': 'Tabuk Pharma',
+        'ar': 'تبوك الدوائية'
+    },
+    'partner2-description': {
+        'en': 'Description about Tabuk Pharma. This can include information about products and services.',
+        'ar': 'وصف عن شركة Tabuk Pharma. يمكن أن يتضمن هذا معلومات حول المنتجات والخدمات.'
+    },
+    'partner3-tab': {
+        'en': 'BECHTEL',
+        'ar': 'BECHTEL'
+    },
+    'partner3-title': {
+        'en': 'BECHTEL',
+        'ar': 'BECHTEL'
+    },
+    'partner3-description': {
+        'en': 'Description about BECHTEL. This can include information about global projects.',
+        'ar': 'وصف عن شركة BECHTEL. يمكن أن يتضمن هذا معلومات حول المشاريع العالمية.'
+    },
+    'partner4-tab': {
+        'en': 'Nesma-Partners',
+        'ar': 'نسما وشركاهم'
+    },
+    'partner4-title': {
+        'en': 'Nesma-Partners',
+        'ar':'نسما وشركاهم'
+    },
+    'partner4-description': {
+        'en': 'Description about Nesma-Partners. This can include information about joint projects.',
+        'ar': 'وصف عن شركة Nesma-Partners. يمكن أن يتضمن هذا معلومات حول المشاريع المشتركة.'
+    },
+    'service1-title': {
+        'en': 'Job Search',
+        'ar': 'البحث عن وظائف'
+    },
+    'service1-description': {
+        'en': 'Find job opportunities and training programs suitable for your specialization and skills.',
+        'ar': 'ابحث عن الوظائف والبرامج التدريبية المناسبة لتخصصك ومهاراتك.'
+    },
+    'service1-button': {
+        'en': 'Learn More',
+        'ar': 'تعلم المزيد'
+    },
+    'service2-title': {
+        'en': 'Create CV',
+        'ar': 'إنشاء سيرة ذاتية'
+    },
+    'service2-description': {
+        'en': 'Create a professional CV that highlights your skills and experience.',
+        'ar': 'قم بإنشاء سيرة ذاتية احترافية تبرز مهاراتك وخبراتك.'
+    },
+    'service2-button': {
+        'en': 'Learn More',
+        'ar': 'تعلم المزيد'
+    },
+    'service3-title': {
+        'en': 'Career Guidance',
+        'ar': 'الإرشاد المهني'
+    },
+    'service3-description': {
+        'en': 'Professional guidance to help you plan and develop your career path.',
+        'ar': 'إرشاد مهني لمساعدتك في تخطيط وتطوير مسارك الوظيفي.'
+    },
+    'service3-button': {
+        'en': 'Learn More',
+        'ar': 'تعلم المزيد'
+    },
+    'main-title':{
+        'en':'Join the Interested Program and develop your future!',
+        'ar':'انضم إلى برنامج مهتم وطور مستقبلك!'
+
+
+    },
+    'sub-title':{
+        'en':'Are you a graduate and want to gain real work experience? The "Muhtem" training program gives you the opportunity to work in real facilities for a period of up to six months, enhancing your CV and gaining you practical job skills.',
+        'ar':'هل أنت خريج وترغب في اكتساب خبرة عملية حقيقية؟ برنامج "مهتم" التدريبي يتيح لك الفرصة للعمل في منشآت حقيقية لمدة تتراوح إلى ستة أشهر، مما يعزز سيرتك الذاتية ويكسبك مهارات وظيفية تطبيقية.'
+
+
+    },
+    'button-btn':{
+        'en':'Register Now',
+        'ar':'سجل الآن'
+
+
     }
+   
 };
 
 // Language toggle functionality
@@ -620,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateButtonText();
 
     // Add counter functionality
-    const targetNumber = 92000; // الرقم المستهدف
+    const targetNumber = 95000; // الرقم المستهدف
     const duration = 10000; // مدة الحركة (بالميلي ثانية)
     const dynamicCounterElement = document.getElementById('dynamicCounter');
 
@@ -700,9 +831,9 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         if (currentLanguage === 'ar') {
-            visitorTextElement.textContent = 'عدد الزوار'; // النص بالعربية
+            visitorTextElement.textContent = 'عدد المسجلين'; // النص بالعربية
         } else {
-            visitorTextElement.textContent = 'Visitor Count'; // النص بالإنجليزية
+            visitorTextElement.textContent = 'Number of Registrants'; // النص بالإنجليزية
         }
     }
 
@@ -756,3 +887,37 @@ document.addEventListener('DOMContentLoaded', function() {
         updateButtonText(); // تحديث نص الزر عند تغيير اللغة
     }
 });
+function updateContent() {
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        console.log(`Updating element with key: ${key}`); // إضافة هذا السطر للتحقق
+        if (translations[key] && translations[key][currentLanguage]) {
+            const translation = translations[key][currentLanguage];
+            if (element.hasAttribute('placeholder')) {
+                element.placeholder = translation;
+            } else {
+                element.textContent = translation;
+            }
+        }
+    });
+}
+document.addEventListener('DOMContentLoaded', function() {
+    currentLanguage = localStorage.getItem('language') || 'en';
+    updateTextDirection();
+    updateContent();
+    updateButtonText();
+});
+console.log('JavaScript file loaded successfully');
+document.addEventListener("DOMContentLoaded", function() {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
+function changeLanguage(lang) {
+    // إخفاء كل النصوص بأي لغة
+    document.querySelectorAll('.ar, .en').forEach(el => el.style.display = 'none');
+
+    // إظهار النصوص الخاصة باللغة المختارة
+    document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
+}
