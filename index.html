@@ -133,7 +133,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/BACKGROUND.jpg'); background-size: cover; background-position: center; height: 100vh;">
+    <section class="hero-section" style="position: relative; height: 100vh; overflow: hidden;">
+        <video autoplay loop muted playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover; top: 50%; left: 0; transform: translateY(-50%); z-index: -1;">
+            <source src="video/ssstwitter.com_1742305446199.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+    
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
@@ -149,11 +154,12 @@
             </div>
         </div>
     </section>
+    
     <div class="col-md-12">
         <div class="stat-card">
             <div class="counter-container">
                 <h3 class="counter" id="dynamicCounter">0</h3>
-                <span id="visitorText" ></span>
+                <span data-translate="visitor_count"></span>
             </div>
         </div>
     </div>
@@ -205,13 +211,13 @@
                         <div class="feature-icon">
                             <i class="fas fa-network-wired fa-2x"></i> <!-- أيقونة جديدة تعبر عن الشبكة المهنية -->
                         </div>
-                        <h3 class="card-title" data-translate="feature-3-title">
+                        <h3 data-translate="feature-3-title">
                             <span class="ar">الإرشاد المهني</span>
                             <span class="en" style="display:none;">Career Guidance</span>
                         </h3>
-                        <p class="card-text" data-translate="feature-3-desc"style="margin-top: 10px;">
+                        <p data-translate="feature-3-desc">
                             <span class="ar">إرشاد مهني لمساعدتك وتطويرك</span>
-                            <span class="en" style="display:none;">Career guidance to assist and develop you</span>
+                            <span class="en" style="display:none;">Career guidance to help and develop you professionally</span>
                         </p>
                     </div>
                 </div>
@@ -266,20 +272,17 @@
             </div>
             <div class="col-md-6">
                 <h2 class="mb-4" data-translate="mahtam-title">
-                    <span class="ar">برنامج مهتم</span>
-                    <span class="en" style="display:none;">Mahtam Program</span>
+                    <span data-translate="mahtam-t">برنامج مهتم</span>
+                    <span data-translate="mahtam-t" style="display:none;">Mahtam Program</span>
                 </h2>
                 <p class="app-section" data-translate="mahtam-description">
-                    <span class="ar">هل أنت خريج وترغب في اكتساب خبرة عملية؟</span>
-                <span class="en" style="display:none;">Are you a graduate looking to gain practical experience?</span>
+                    <span data-translate="sub-title" class="ar"></span>
+                    <span data-translate="sub-title" class="en" style="display:none;"> </span>
                 </p>
-                <p style="font-size: 20px;" data-translate="mahtam-enjoy">
-                    <span class="ar">برنامج مهتم هو برنامج تدريبي يتيح للخريجين تطوير مهاراتهم واكتساب خبرة عملية في بيئة عمل حقيقية، مما يعزز فرصهم في سوق العمل.</span>
-                    <span class="en" style="display:none;">Mahtam program is a training program that allows graduates to develop their skills and gain practical experience in a real work environment, enhancing their chances in the labor  market.</span>
-                </p>
+                
                 <a href="#" class="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer" data-translate="register-now">
-                    <span class="ar">سجل الآن</span>
-                    <span class="en" style="display:none;">Register Now</span>
+                    <span  data-translate="register-now" class="ar">سجل الآن</span>
+                    <span data-translate="register-now" class="en" style="display:none;">Register Now</span>
                 </a>
             </div>
         </div>

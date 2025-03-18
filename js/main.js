@@ -53,12 +53,12 @@ const translations = {
         'ar': 'تواصل مع أصحاب العمل الباحثين عن الخريجين الموهوبين'
     },
     'feature-3-title': {
-        'en': 'Professional Network',
-        'ar': 'شبكة مهنية'
+        'en': 'Career Guidance',
+        'ar': 'إرشاد مهني'
     },
     'feature-3-desc': {
-        'en': 'Build connections with industry professionals',
-        'ar': 'بناء علاقات مع المتخصصين في المجال'
+        'en': 'Career guidance to help and develop you professionally',
+        'ar': 'إرشاد مهني لمساعدتك وتطويرك'
     },
     'stats-section-title': {
         'en': 'Platform Statistics',
@@ -642,13 +642,19 @@ const translations = {
 
 
     },
+    'mahtam-title':{
+        'en':'Mahtam Program',
+        'ar':'برنامج مهتم'
+
+
+    },
     'sub-title':{
         'en':'Are you a graduate and want to gain real work experience? The "Muhtem" training program gives you the opportunity to work in real facilities for a period of up to six months, enhancing your CV and gaining you practical job skills.',
         'ar':'هل أنت خريج وترغب في اكتساب خبرة عملية حقيقية؟ برنامج "مهتم" التدريبي يتيح لك الفرصة للعمل في منشآت حقيقية لمدة تتراوح إلى ستة أشهر، مما يعزز سيرتك الذاتية ويكسبك مهارات وظيفية تطبيقية.'
 
 
     },
-    'button-btn':{
+    'register-now':{
         'en':'Register Now',
         'ar':'سجل الآن'
 
@@ -914,10 +920,4 @@ document.addEventListener("DOMContentLoaded", function() {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
-function changeLanguage(lang) {
-    // إخفاء كل النصوص بأي لغة
-    document.querySelectorAll('.ar, .en').forEach(el => el.style.display = 'none');
 
-    // إظهار النصوص الخاصة باللغة المختارة
-    document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'inline');
-}
