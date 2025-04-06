@@ -12,120 +12,117 @@
 </head>
 <body class="ltr">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="R.png" alt="University of Tabuk | جامعة تبوك" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link nav-home" href="index.html" data-translate="nav-home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-about" href="about.html" data-translate="nav-about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-services" href="services.html" data-translate="nav-services">Our Services</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <button class="btn btn-outline-primary ms-2" onclick="toggleLanguage()">عربي</button>
-                    <div class="dropdown">
-                        <button id="loginButton" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav-login">تسجيل الدخول</button>
-
-<ul class="dropdown-menu" aria-labelledby="loginButton">
-    <li>
-        <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/students/index.php?signin_tab=0" 
-           data-bs-toggle="tooltip" data-bs-placement="right" title=" الباحثين عن تدريب أو توظيف "
-           target="_blank" rel="noopener noreferrer" data-translate="students-graduates">الطلاب / خريجون</a>
-    </li>
-    <li>
-        <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/faculty/index.php?signin_tab=0" 
-           data-bs-toggle="tooltip" data-bs-placement="right" title=" كمشرف أكاديمي  من أعضاء هيئة التدريس "
-           target="_blank" rel="noopener noreferrer" data-translate="faculty">أعضاء هيئة التدريس</a>
-    </li>
-    <li>
-        <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/employers/index.php?signin_tab=0" 
-           data-bs-toggle="tooltip" data-bs-placement="right" title="كشركة توظيف أو تدريب "
-           target="_blank" rel="noopener noreferrer" data-translate="companies">شركات</a>
-    </li>
-</ul>
-
+                <a class="navbar-brand" href="#">
+                    <img src="R.png" alt="جامعة تبوك">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active nav-home" href="index.html"data-translate="nav-home">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-about" href="about.html" data-translate="nav-about">من نحن</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-primary me-2" id="language-toggle" onclick="toggleLanguage()">
+                            <span class="en">English</span>
+                            <span class="ar" style="display:none;">العربية</span>
+                        </button>
+                        <div class="dropdown">
+                            <button id="loginButton" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav-login">تسجيل الدخول</button>
+                            <ul class="dropdown-menu" aria-labelledby="loginButton">
+                                <li>
+                                    <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/students/index.php?signin_tab=0" 
+                                       data-bs-toggle="tooltip" data-bs-placement="right" title="الباحثين عن تدريب أو توظيف"
+                                       target="_blank" rel="noopener noreferrer" data-translate="students-graduates">الطلاب / خريجون</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/faculty/index.php?signin_tab=0" 
+                                       data-bs-toggle="tooltip" data-bs-placement="right" title="كمشرف أكاديمي من أعضاء هيئة التدريس"
+                                       target="_blank" rel="noopener noreferrer" data-translate="faculty">أعضاء هيئة التدريس</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/employers/index.php?signin_tab=0" 
+                                       data-bs-toggle="tooltip" data-bs-placement="right" title="كشركة توظيف أو تدريب"
+                                       target="_blank" rel="noopener noreferrer" data-translate="companies">شركات</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <!-- Videos Section -->
     <section class="videos-section py-5">
         <div class="container">
-            <a href="about.html" class="back-button btn btn-secondary mb-3" title="Back to About Page">
-                <i class="fas fa-arrow-left fa-2x"></i>
+            <a href="about.html" class="back-button btn btn-outline-secondary mb-3" title="العودة">
+                <i class="fas fa-arrow-right"></i>
             </a>
-            <h1 class="text-center mb-5" data-translate="companies-videos-title">Companies Training Videos</h1>
-            <div class="row g-4">
-                <!-- Video Card 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="video-card card">
-                        <div class="ratio ratio-16x9">
-                            <video class="video-iframe" width="100%" height="315" controls>
-                                <source src="video/نهائي تدريب تعاوني شركات.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="video-1-title">How to Post Job Opportunities</h5>
-                            <p class="card-text" data-translate="video-1-desc">Learn how to effectively post job and training opportunities on our platform.</p>
+            <h1 class="text-center mb-5">فيديوهات تدريب الشركات</h1>
+            
+            <div class="video-container">
+                <!-- محتوى الفيديو والشرح -->
+                <div class="video-player-container">
+                    <div class="video-player">
+                        <video id="currentVideo" width="100%" height="100%" controls>
+                            <source src="video/نهائي تدريب تعاوني شركات.mp4" type="video/mp4">
+                            متصفحك لا يدعم تشغيل الفيديو.
+                        </video>
+                    </div>
+                    
+                    <div class="video-description">
+                        <h3 id="videoTitle">كيفية نشر فرص العمل</h3>
+                        <p id="videoDesc">هذا الفيديو يشرح بالتفصيل كيفية نشر فرص العمل والتدريب على منصتنا للشركات المسجلة.</p>
+                        <div class="video-meta d-flex">
+                            <span class="me-3"><i class="far fa-clock me-1"></i> <span id="videoDuration">5:30 دقيقة</span></span>
+                            <span><i class="far fa-calendar-alt me-1"></i> <span id="videoDate">2023-10-15</span></span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Video Card 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="video-card card">
-                        <div class="ratio ratio-16x9">
-                            <video class="video-iframe" width="100%" height="315" controls>
-                                <source src="video/another-video.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="video-2-title">Managing Applications</h5>
-                            <p class="card-text" data-translate="video-2-desc">Learn how to manage applications effectively.</p>
-                        </div>
+                
+                <!-- الألسنة الجانبية -->
+                <div class="video-tabs">
+                    <div class="video-tab active" data-video="video1">
+                        <h5>كيفية نشر فرص العمل</h5>
+                        <small>مدة الفيديو: 5:30 دقيقة</small>
                     </div>
-                </div>
-
-                <!-- Video Card 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="video-card card">
-                        <div class="ratio ratio-16x9">
-                            <video class="video-iframe" width="100%" height="315" controls>
-                                <source src="video/yet-another-video.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="video-3-title">Communication Tools</h5>
-                            <p class="card-text" data-translate="video-3-desc">Explore various communication tools available.</p>
-                        </div>
+                    <div class="video-tab" data-video="video2">
+                        <h5>إدارة الطلبات</h5>
+                        <small>مدة الفيديو: 7:15 دقيقة</small>
+                    </div>
+                    <div class="video-tab" data-video="video3">
+                        <h5>أدوات التواصل</h5>
+                        <small>مدة الفيديو: 6:20 دقيقة</small>
+                    </div>
+                    <div class="video-tab" data-video="video4">
+                        <h5>تقييم المتقدمين</h5>
+                        <small>مدة الفيديو: 8:45 دقيقة</small>
+                    </div>
+                    <div class="video-tab" data-video="video5">
+                        <h5>نظام التدريب التعاوني</h5>
+                        <small>مدة الفيديو: 6:10 دقيقة</small>
+                    </div>
+                    <div class="video-tab" data-video="video6">
+                        <h5>إعداد التقارير</h5>
+                        <small>مدة الفيديو: 4:50 دقيقة</small>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     
      <!-- Footer -->
-     <footer class="bg-dark text-light py-4">
+     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <h5 data-translate="contact-title">
                         <span class="ar">اتصل بنا</span>
                         <span class="en" style="display:none;">Contact Us</span>
@@ -135,12 +132,11 @@
                         <span class="en" style="display:none;">University of Tabuk - Kingdom of Saudi Arabia</span>
                     </p>
                     <p data-translate="email">
-                        <span class="ar">البريد الإلكتروني: p.g.affairs@ut.edu.sa </span>
+                        <span class="ar">البريد الإلكتروني: p.g.affairs@ut.edu.sa</span>
                         <span class="en" style="display:none;">Email: p.g.affairs@ut.edu.sa</span>
                     </p>
-                    
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 text-end">
                     <h5 data-translate="follow-us">
                         <span class="ar">تابعنا</span>
                         <span class="en" style="display:none;">Follow Us</span>
@@ -157,5 +153,89 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.video-tab');
+            
+            // دالة لتحديث محتوى الفيديو
+            function updateVideoContent(videoId) {
+                // بيانات الفيديوهات (يمكن استبدالها ببيانات حقيقية من قاعدة بيانات)
+                const videos = {
+                    'video1': {
+                        title: 'كيفية نشر فرص العمل',
+                        desc: 'هذا الفيديو يشرح بالتفصيل كيفية نشر فرص العمل والتدريب على منصتنا للشركات المسجلة.',
+                        duration: '5:30 دقيقة',
+                        date: '2023-10-15',
+                        src: 'video/نهائي تدريب تعاوني شركات.mp4'
+                    },
+                    'video2': {
+                        title: 'إدارة الطلبات',
+                        desc: 'تعلم كيفية إدارة طلبات التوظيف والتدريب الواردة من المتقدمين.',
+                        duration: '7:15 دقيقة',
+                        date: '2023-11-02',
+                        src: 'video/إدارة-الطلبات.mp4'
+                    },
+                    'video3': {
+                        title: 'أدوات التواصل',
+                        desc: 'استكشف أدوات التواصل المتاحة للشركات للتواصل مع المتقدمين.',
+                        duration: '6:20 دقيقة',
+                        date: '2023-11-20',
+                        src: 'video/أدوات-التواصل.mp4'
+                    },
+                    'video4': {
+                        title: 'تقييم المتقدمين',
+                        desc: 'كيفية تقييم المتقدمين لفرص العمل والتدريب واختيار الأنسب.',
+                        duration: '8:45 دقيقة',
+                        date: '2023-12-05',
+                        src: 'video/تقييم-المتقدمين.mp4'
+                    },
+                    'video5': {
+                        title: 'نظام التدريب التعاوني',
+                        desc: 'شرح مفصل لنظام التدريب التعاوني في الجامعة ومتطلباته للشركات.',
+                        duration: '6:10 دقيقة',
+                        date: '2023-12-12',
+                        src: 'video/نظام-التدريب.mp4'
+                    },
+                    'video6': {
+                        title: 'إعداد التقارير',
+                        desc: 'كيفية إعداد التقارير المطلوبة عن المتدربين وتقييم أدائهم.',
+                        duration: '4:50 دقيقة',
+                        date: '2023-12-20',
+                        src: 'video/إعداد-التقارير.mp4'
+                    }
+                };
+                
+                const video = videos[videoId];
+                if (video) {
+                    document.getElementById('videoTitle').textContent = video.title;
+                    document.getElementById('videoDesc').textContent = video.desc;
+                    document.getElementById('videoDuration').textContent = video.duration;
+                    document.getElementById('videoDate').textContent = video.date;
+                    
+                    const videoPlayer = document.getElementById('currentVideo');
+                    videoPlayer.src = video.src;
+                    videoPlayer.load();
+                }
+            }
+            
+            // إضافة حدث النقر لكل تبويب
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // إزالة التنشيط من جميع الألسنة
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    // إضافة التنشيط للسان المحدد
+                    this.classList.add('active');
+                    
+                    // تحديث محتوى الفيديو
+                    const videoId = this.getAttribute('data-video');
+                    updateVideoContent(videoId);
+                });
+            });
+            
+            // تشغيل الفيديو الأول تلقائياً
+            updateVideoContent('video1');
+        });
+    </script>
 </body>
 </html>

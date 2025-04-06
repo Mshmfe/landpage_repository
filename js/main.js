@@ -33,24 +33,24 @@ const translations = {
         'ar': 'ابدأ الآن'
     },
     'why-choose-us': {
-        'en': 'Why Choose Our Platform?',
-        'ar': 'لماذا تختار منصتنا؟'
+        'en': 'Get ready for your next step in your career with us',
+        'ar': 'استعد لخطوتك القادمة في مسيرتك المهنية معنا'
     },
     'feature-1-title': {
-        'en': 'Training Opportunities',
-        'ar': 'فرص تدريبية'
+        'en': 'CV Builder',
+        'ar': 'إنشاء سيرة ذاتيه'
     },
     'feature-1-desc': {
-        'en': 'Access diverse training programs from leading companies',
-        'ar': 'برامج تدريبية متنوعة من شركات رائدة'
+        'en': 'Create a professional CV that highlights your skills and experience',
+        'ar': 'إنشاء سيرة ذاتية احترافية تبرز مهاراتك وخبراتك'
     },
     'feature-2-title': {
-        'en': 'Job Opportunities',
-        'ar': 'فرص وظيفية'
+        'en': 'Job and Training Opportunities',
+        'ar': 'فرص وظيفية وتدريبية'
     },
     'feature-2-desc': {
-        'en': 'Connect with employers seeking talented graduates',
-        'ar': 'تواصل مع أصحاب العمل الباحثين عن الخريجين الموهوبين'
+        'en': 'Access diverse job and training opportunities',
+        'ar': 'الوصول إلى فرص وظيفية وتدريبية متنوعة'
     },
     'feature-3-title': {
         'en': 'Career Guidance',
@@ -329,8 +329,8 @@ const translations = {
         'ar': 'عن منصتنا'
     },
     'about-subtitle': {
-        'en': 'Learn more about our mission to connect students And Alumni with opportunities',
-        'ar': 'تعرف على مهمتنا في ربط الطلاب والخريجين بالفرص'
+        'en': 'Get ready for your next step in your career with us',
+        'ar': 'استعد لخطوتك القادمة في مسيرتك المهنية معنا'
     },
     'about-mission-title': {
         'en': 'Our Mission',
@@ -376,37 +376,10 @@ const translations = {
         'en': 'Instant notifications about new opportunities',
         'ar': 'إشعارات فورية عن الفرص الجديدة'
     },
-    'our-team': {
-        'en': 'Our Team',
-        'ar': 'فريقنا'
-    },
-    'team1-name': {
-        'en': 'Dr. Abdullah Al-Zahrani',
-        'ar': 'د. عبد الله الزهراني'
-    },
-    'team1-position': {
-        'en': 'Platform Director',
-        'ar': 'مدير المنصة'
-    },
-    'team2-name': {
-        'en': 'Dr. Sarah Al-Otaibi',
-        'ar': 'د. سارة العتيبي'
-    },
-    'team2-position': {
-        'en': 'Career Development Manager',
-        'ar': 'مدير تطوير المهارات'
-    },
-    'team3-name': {
-        'en': 'Eng. Mohammed Al-Harbi',
-        'ar': 'مهندس محمد الحربي'
-    },
-    'team3-position': {
-        'en': 'Technical Support Manager',
-        'ar': 'مدير الدعم الفني'
-    },
+ 
     'companies-section': {
-        'en': 'Companies Section',
-        'ar': 'قسم الشركات'
+        'en': 'Companies ',
+        'ar': 'الشركات'
     },
     'companies-desc': {
         'en': 'We provide companies with an integrated platform to connect with talented students and graduates',
@@ -433,20 +406,20 @@ const translations = {
         'ar': 'الطلاب والخريجين'
     },
     'students-desc': {
-        'en': 'We offer outstanding training and employment opportunities in major companies',
-        'ar': 'نقدم فرص تدريب وتوظيف متميزة في كبرى الشركات'
+        'en': 'Provide training and employment opportunities in major companies to enhance the career path.',
+        'ar': 'إتاحة فرص تدريب وتوظيف في أكبر الشركات لتعزيز المسار المهني.'
     },
     'students-feature-1': {
-        'en': '✓ Search for training and job opportunities',
-        'ar': '✓ البحث عن فرص التدريب والتوظيف'
+        'en': '✓ Search for appropriate job and training opportunities',
+        'ar': '✓ البحث عن الفرص الوظيفيه والتدريبية المناسبة'
     },
     'students-feature-2': {
-        'en': '✓ Build professional CV',
-        'ar': '✓ بناء السيرة الذاتية الاحترافية'
+        'en': '✓ Support in CV preparation to attract the best opportunities',
+        'ar': '✓ دعم في إعداد السيرة الذاتية لجذب أفضل الفرص'
     },
     'students-feature-3': {
-        'en': '✓ Direct communication with companies',
-        'ar': '✓ تواصل مباشر مع الشركات'
+        'en': '✓ Build strategic partnerships with major institutions and companies to ensure a prosperous career',
+        'ar': '✓ بناء شراكات استراتيجية مع مؤسسات وشركات كبرى لضمان مستقبل مهني واعد'
     },
     'view-students-videos': {
         'en': 'View Training Videos',
@@ -659,8 +632,94 @@ const translations = {
         'ar':'سجل الآن'
 
 
+    },
+   'partner5-tab':{
+        'en': 'ALbwany',
+        'ar': 'البواني'
+    },
+    'partner5-title':{
+        'en': 'ALbwany',
+        'ar': 'البواني'
+    },
+    'partner5-description':{
+        'en': 'Description about ALbwany. This can include information about global projects.',
+        'ar': 'وصف عن شركة البواني. يمكن أن يتضمن هذا معلومات حول المشاريع العالمية.'
+    },
+    'grads-headline':{
+        'en':'First Batch Graduates of Hospitality Pioneers Program',
+        'ar':'خريجون الدفعة الأولى من برنامج رواد الضيافة'
+    },
+    'innovation-title':{
+        'en':'University of Tabuk Achieves Innovation Level',
+        'ar':'جامعة تبوك تحقق مستوى الابتكار'
+    },
+    'innovation-content':{
+        'en':'University of Tabuk achieves the innovation level, which is the highest classification according to the National Digital Education Index 2023',
+        'ar':'جامعة تبوك تحقق مستوى الابتكار،والذي يعد التصنيف الأعلى وفقاً للمؤشر الوطني للتعليم الرقمي 2023.'
+    },
+    'decision-title':{
+        'en':'Council Approves a Working Course in.',
+        'ar':'الإجابة تعتمد مقرراً عاملاً في.'
+    },
+    'decision-content':{
+        'en':'In a step that aligns with the strategic direction to keep pace with technological developments',
+        'ar':'في خطوة تمكن التوجة الاستراتيجي لمواكبة التطورات النقلية.'
+    },
+    'student-title':{
+       'ar':'طالب كلية ' ,
+       'en':'College Student'
+    },
+    'vision-title':
+    {
+        'ar':'جامعة تُلهم الإبداع',
+        'en':'University Inspiring Creativity'
+    },
+    'vision-subtitle':
+    {
+        'ar':'وتسهم في بناء الإنسان وتنمية المكان',
+        'en':'Contributing to human development and placemaking'
+    },
+    'goals-title':{
+        'ar':'أهداف استراتيجية',
+        'en':'Strategic Goals'
+    },
+    'goals-subtitle':
+    {
+        'ar':'الجامعة 2030',
+        'en':'University 2030'
+    },
+    'learning-title':{
+        'ar':'التقييم والتعلم',
+        'en':'Assessment and Learning'
+    },
+    'vision-heading':{
+        'ar':'جامعة تُلهم الإبداع',
+        'en':'University Inspiring Creativity'
+    },
+    'vision-text':{
+        'ar':'نوفر بيئة محفزة للإبداع والابتكار، نسعى لأن نكون جامعة رائدة عالميًا.',
+        'en':'We provide an environment that stimulates creativity and innovation, striving to be a globally leading university'
+    },
+    'goals-heading':{
+        'ar':'أهداف استراتيجية',
+        'en':'Strategic Goals'
+    },
+    'goals-text':{
+        'ar':'نوفر فرص المشاركة في المسؤولية القيادية لتحقيق أهداف استراتيجية 2030.',
+        'en':'We provide opportunities to participate in leadership responsibility to achieve the 2030 strategic goals'
+    },'learning-heading':{
+        'ar':'التقييم والتعلم',
+        'en':'Assessment and Learning'
+    },
+    'learning-text':{
+        'ar':'تحسين بيئات التعليم والتعلم بما يتوافق مع متطلبات سوق العمل.',
+        'en':'Improving teaching and learning environments in line with labor market requirements'
+    },
+    'news-title':{
+        'ar':'قصص نجاح',
+        'en':'Success Stories'
     }
-   
+    
 };
 
 // Language toggle functionality
@@ -921,3 +980,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+const mahtamCarousel = new bootstrap.Carousel('#mahtamCarousel', {
+    interval: 5000,
+    pause: 'hover'
+});

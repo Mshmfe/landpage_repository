@@ -4,427 +4,619 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training & Employment Platform - University of Tabuk | منصة التدريب والتوظيف - جامعة تبوك</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .navigation-arrows {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .arrow {
-            background-color: var(--primary-color); /* اللون الأخضر */
-            color: white; /* لون النص */
-            border: none; /* إزالة الحدود */
-            padding: 10px 15px; /* حشوة */
-            margin: 0 10px; /* مسافة بين الأسهم */
-            cursor: pointer; /* تغيير شكل المؤشر عند المرور */
-            border-radius: 5px; /* زوايا دائرية */
-            font-size: 18px; /* حجم الخط */
-            transition: background-color 0.3s; /* تأثير الانتقال */
-        }
-
-        .arrow:hover {
-            background-color: #0056b3; /* لون الخلفية عند المرور */
-        }
-        
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            justify-content: center;
-            align-items: center;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 5px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            border: none;
-            width: 100%;
-            text-align: left;
-            transition: background-color 0.3s;
-        }
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-        .show {
-            display: block;
-        }
-        [dir="rtl"] .dropdown-menu {
-        right: 0;
-        left: auto;
-        text-align: right;
-    }
-
-    [dir="ltr"] .dropdown-menu {
-        left: 0;
-        right: auto;
-        text-align: left;
-    }
-   
- </style>
 </head>
 <body class="rtl">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="R.png" alt="جامعة تبوك | University of Tabuk" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active nav-home" href="index.html" data-translate="nav-home">الرئيسية</a>
+                <a class="navbar-brand" href="#">
+                    <img src="R.png" alt="جامعة تبوك">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active nav-home" href="index.html"data-translate="nav-home">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-about" href="about.html" data-translate="nav-about">من نحن</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-primary me-2" id="language-toggle" onclick="toggleLanguage()">
+                            <span class="en">English</span>
+                            <span class="ar" style="display:none;">العربية</span>
+                        </button>
+                        <div class="dropdown">
+                            <button id="loginButton" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav-login">تسجيل الدخول</button>
+                            <ul class="dropdown-menu" aria-labelledby="loginButton">
+                                <li>
+                                    <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/students/index.php?signin_tab=0" 
+                                       data-bs-toggle="tooltip" data-bs-placement="right" title="الباحثين عن تدريب أو توظيف"
+                                       target="_blank" rel="noopener noreferrer" data-translate="students-graduates">الطلاب / خريجون</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/faculty/index.php?signin_tab=0" 
+                                       data-bs-toggle="tooltip" data-bs-placement="right" title="كمشرف أكاديمي من أعضاء هيئة التدريس"
+                                       target="_blank" rel="noopener noreferrer" data-translate="faculty">أعضاء هيئة التدريس</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/employers/index.php?signin_tab=0" 
+                                       data-bs-toggle="tooltip" data-bs-placement="right" title="كشركة توظيف أو تدريب"
+                                       target="_blank" rel="noopener noreferrer" data-translate="companies">شركات</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <video autoplay loop muted playsinline>
+                <source src="video/Untitled video - Made with Clipchamp (3).mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        
+            <div class="container hero-content">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="hero-title" data-translate="hero-title">
+                            <span class="ar">منصة جامعة تبوك للتدريب والتوظيف</span>
+                            <span class="en" style="display:none;">Tabuk University Platform for Training and Employment</span>
+                        </h1>
+                        <p class="hero-subtitle" data-translate="hero-subtitle">
+                            <span class="ar">هي بوابتك لفرص التدريب والتوظيف في سوق العمل</span>
+                            <span class="en" style="display:none;">Your gateway to training and employment opportunities at University of Tabuk</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Counter -->
+        <div class="container">
+            <div class="stat-card">
+                <div class="counter-container">
+                    <h3 class="counter" id="dynamicCounter">0</h3>
+                    <span data-translate="visitor_count"></span>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Features Section -->
+        <section class="features-section py-5">
+            <div class="container">
+                <h2 class="section-title" data-translate="why-choose-us">
+                    <span class="ar"></span>
+                    <span class="en" style="display:none;"></span>
+                </h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <a href="https://tabuk-csm.symplicity.com/students/index.php?ss=rb&rbmode=list&s=resume" class="feature-card-link" target="_blank">
+                            <div class="feature-card" data-bs-toggle="tooltip" data-bs-placement="top" title="اضغط لمعرفة المزيد عن فرص التدريب">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <h3 data-translate="feature-1-title">
+                                    <span class="ar">إنشاء سيرة ذاتية</span>
+                                    <span class="en" style="display:none;">CV Builder</span>
+                                </h3>
+                                <p data-translate="feature-1-desc">
+                                    <span class="ar">إنشاء سيرة ذاتية احترافية تبرز مهاراتك وخبراتك</span>
+                                    <span class="en" style="display:none;">Create a professional CV that highlights your skills and experience</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <a href="https://tabuk-csm.symplicity.com/students/app/jobs/discover" class="feature-card-link" target="_blank">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h3 data-translate="feature-2-title">
+                                    <span class="ar">فرص وظيفية</span>
+                                    <span class="en" style="display:none;">Job Opportunities</span>
+                                </h3>
+                                <p data-translate="feature-2-desc">
+                                    <span class="ar">توفير فرص عمل متميزة للطلاب والخريجين</span>
+                                    <span class="en" style="display:none;">Providing excellent job opportunities for students and graduates</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <a href="https://tabuk-csm.symplicity.com/students/index.php?s=calendar&ss=app_main&mode=landing" class="feature-card-link" target="_blank">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h3 data-translate="feature-3-title">
+                                    <span class="ar">الإرشاد المهني</span>
+                                    <span class="en" style="display:none;">Career Guidance</span>
+                                </h3>
+                                <p data-translate="feature-3-desc">
+                                    <span class="ar">إرشاد مهني لمساعدتك وتطويرك</span>
+                                    <span class="en" style="display:none;">Career guidance to help and develop you professionally</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- App Section -->
+        <section class="app-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="images/Purple Modern App Instagram Ad.png" alt="تطبيق المنصة" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="mb-4" data-translate="app-title">
+                            <span class="ar">المنصة بين يديك، بكل سهولة وراحة</span>
+                            <span class="en" style="display:none;">The platform is in your hands, with ease and comfort</span>
+                        </h2>
+                        <p class="mb-4" data-translate="app-description">
+                            <span class="ar">مع تطبيق منصتنا، كل شيء أصبح في متناول يدك! المنصة ستكون رفيقك الدائم.</span>
+                            <span class="en" style="display:none;">With our platform app, everything is at your fingertips! The platform will be your constant companion.</span>
+                        </p>
+                        <p class="mb-4" style="font-size: 20px;" data-translate="app-enjoy">
+                            <span class="ar">استمتع بتجربة استخدام المنصة من خلال التطبيق.</span>
+                            <span class="en" style="display:none;">Enjoy using the platform through the app.</span>
+                        </p>
+                        <div class="platform-icons">
+                            <a href="https://play.google.com/store/apps/details?id=com.symplicity.csmandroid.es&hl=ar" target="_blank">
+                                <img src="images/google-play-badge-en.png" alt="Android" class="platform-icon">
+                            </a> 
+                            <a href="https://apps.apple.com/us/app/symplicity-jobs-and-careers/id1239828027" target="_blank">
+                                <img src="images/apple-store-badge-en.png" alt="iOS" class="platform-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Video Section -->
+        <section class="video-description-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h3 class="mb-4" data-translate="video-title">
+                            <span class="ar">هل تبحث عن انطلاقة جديدة لمسيرتك المهنية؟</span>
+                            <span class="en" style="display:none;">Are you looking for a new start to your career?</span>
+                        </h3>
+                        <p class="mb-4" data-translate="video-subtitle">
+                            <span class="ar">منصة جامعة تبوك للتدريب و التوظيف هي شريكك في رحلة البحث</span>
+                            <span class="en" style="display:none;">The University of Tabuk Training and Employment Platform is your partner in the journey of search.</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="video-container">
+                            <video width="100%" controls>
+                                <source src="video/تشويقي.mp4" type="video/mp4">
+                                <span data-translate="video-not-supported"></span>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="news-section" dir="rtl">
+            <h1 class="section-title" data-translate="news-title">
+                <span class="ar">قصص نجاح</span>
+                <span class="en" style="display:none;">Success Stories</span>
+            </h1>
+            <div class="title-divider"></div>
+            <div class="news-container" id="news-section">
+                <!-- البطاقة البرتقالية على اليمين مع صورة -->
+                <div class="main-card orange-border rounded-corners">
+                    <img src="images/GdZdloFXMAANRE7.jpeg" alt="صورة الأخبار" class="news-image">
+                    <h1 class="image-caption" data-translate="grads-headline">
+                        <span class="ar">خريجون الدفعة الأولى من برنامج رواد الضيافة</span>
+                        <span class="en" style="display:none;">First Batch Graduates of Hospitality Pioneers Program</span>
+                    </h1>
+                    <div class="divider-line"></div>
+                </div>
+              
+                <!-- البطاقات الخضراء على اليسار -->
+                <div class="side-cards">
+                    <div class="news-card green-border">
+                        <div class="card-content-with-image">
+                            <div class="text-content">
+                                <h3 class="news-title" data-translate="innovation-title">
+                                    <strong class="ar">جامعة تبوك تحقق مستوى الابتكار</strong>
+                                    <strong class="en" style="display:none;">University of Tabuk Achieves Innovation Level</strong>
+                                </h3>
+                                <p class="news-content" data-translate="innovation-content">
+                                    <span class="ar">جامعة تبوك تحقق مستوى الابتكار،والذي يعد التصنيف الأعلى وفقاً للمؤشر الوطني للتعليم الرقمي 2023</span>
+                                    <span class="en" style="display:none;">University of Tabuk achieves the innovation level, which is the highest classification according to the National Digital Education Index 2023</span>
+                                </p>
+                                <div class="news-date" data-translate="innovation-date">Mar 20, 2024</div>
+                            </div>
+                            <img src="images/GJEHdWfXgAA2av7.jpeg" alt="صورة الخبر" class="card-image">
+                        </div>
+                    </div>
+                  
+                    <div class="news-card green-border">
+                        <h3 class="news-title" data-translate="decision-title">
+                            <strong class="ar">الإجابة تعتمد مقرراً عاملاً في</strong>
+                            <strong class="en" style="display:none;">Council Approves a Working Course in</strong>
+                        </h3>
+                        <p class="news-content" data-translate="decision-content">
+                            <span class="ar">في خطوة تمكنس اللوجه الاستراتيجي لمواكبة التطورات النقلية</span>
+                            <span class="en" style="display:none;">In a step that aligns with the strategic direction to keep pace with technological developments</span>
+                        </p>
+                        <div class="news-date" data-translate="decision-date">2025-03-21</div>
+                    </div>
+                  
+                    <div class="news-card green-border">
+                        <h3 class="news-title" data-translate="student-title">
+                            <strong class="ar">طالب كلية</strong>
+                            <strong class="en" style="display:none;">College Student</strong>
+                        </h3>
+                        <div class="news-date" data-translate="student-date">2025-03-21</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="interactive-section" id="interactive-section">
+                <!-- الأقسام الرئيسية -->
+                <div class="section-tabs">
+                    <div class="tab active" data-tab="vision">
+                        <h3 data-translate="vision-title">
+                            <span class="ar">جامعة تُلهم الإبداع</span>
+                            <span class="en" style="display:none;">University Inspiring Creativity</span>
+                        </h3>
+                        <p data-translate="vision-subtitle">
+                            <span class="ar">وتسهم في بناء الإنسان وتنمية المكان</span>
+                            <span class="en" style="display:none;">Contributing to human development and placemaking</span>
+                        </p>
+                    </div>
+                  
+                    <div class="tab" data-tab="goals">
+                        <h3 data-translate="goals-title">
+                            <span class="ar">أهداف استراتيجية</span>
+                            <span class="en" style="display:none;">Strategic Goals</span>
+                        </h3>
+                        <p data-translate="goals-subtitle">
+                            <span class="ar">الجامعة 2030</span>
+                            <span class="en" style="display:none;">University 2030</span>
+                        </p>
+                    </div>
+                  
+                    <div class="tab" data-tab="learning">
+                        <h3 data-translate="learning-title">
+                            <span class="ar">التقييم والتعلم</span>
+                            <span class="en" style="display:none;">Assessment and Learning</span>
+                        </h3>
+                    </div>
+                </div>
+                
+                <!-- محتوى الأقسام -->
+                <div class="section-content">
+                    <!-- قسم الرؤية -->
+                    <div class="content active" id="vision-content">
+                        <div class="content-image">
+                            <img src="images/F39ERBNWoAAfWMu.jpeg" alt="رؤية الجامعة">
+                        </div>
+                        <div class="content-text">
+                            <h2 data-translate="vision-heading">
+                                <span class="ar">جامعة تُلهم الإبداع</span>
+                                <span class="en" style="display:none;">University Inspiring Creativity</span>
+                            </h2>
+                            <p data-translate="vision-text">
+                                <span class="ar">نوفر بيئة محفزة للإبداع والابتكار، نسعى لأن نكون جامعة رائدة عالميًا</span>
+                                <span class="en" style="display:none;">We provide an environment that stimulates creativity and innovation, striving to be a globally leading university</span>
+                            </p>
+                        </div>
+                    </div>
+                  
+                    <!-- قسم الأهداف -->
+                    <div class="content" id="goals-content">
+                        <div class="content-image">
+                            <img src="images/F384PJfXwAApkmI.jpeg" alt="أهداف الجامعة">
+                        </div>
+                        <div class="content-text">
+                            <h2 data-translate="goals-heading">
+                                <span class="ar">أهداف استراتيجية 2030</span>
+                                <span class="en" style="display:none;">Strategic Goals 2030</span>
+                            </h2>
+                            <p data-translate="goals-text">
+                                <span class="ar">نوفر فرص المشاركة في المسؤولية القيادية لتحقيق أهداف استراتيجية 2030</span>
+                                <span class="en" style="display:none;">We provide opportunities to participate in leadership responsibility to achieve the 2030 strategic goals</span>
+                            </p>
+                        </div>
+                    </div>
+                  
+                    <!-- قسم التقييم -->
+                    <div class="content" id="learning-content">
+                        <div class="content-image">
+                            <img src="images/F39knU2XIAAQTns.jpeg" alt="التقييم والتعلم">
+                        </div>
+                        <div class="content-text">
+                            <h2 data-translate="learning-heading">
+                                <span class="ar">التقييم والتعلم</span>
+                                <span class="en" style="display:none;">Assessment and Learning</span>
+                            </h2>
+                            <p data-translate="learning-text">
+                                <span class="ar">تحسين بيئات التعليم والتعلم بما يتوافق مع متطلبات سوق العمل</span>
+                                <span class="en" style="display:none;">Improving teaching and learning environments in line with labor market requirements</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        <!-- Mahtam Program Section 
+        <section class="app-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="video-container">
+                            <video width="100%" controls>
+                                <source src="video/mp4" type="video/mp4">
+                                <span data-translate="video-not-supported"></span>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="mb-4" data-translate="mahtam-title">
+                            <span data-translate="mahtam-t" class="ar"></span>
+                            <span data-translate="mahtam-t" class="en" style="display:none;"></span>
+                        </h2>
+                        <p class="mb-4" data-translate="mahtam-description">
+                            <span data-translate="sub-title" class="ar"></span>
+                            <span data-translate="sub-title" class="en" style="display:none;"></span>
+                        </p>
+                        <a href="#" class="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer" data-translate="register-now">
+                            <span class="ar">سجل الآن</span>
+                            <span class="en" style="display:none;">Register Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    -->
+        <!-- Partners Section -->
+        <section class="partners-section">
+            <div class="container">
+                <h2 class="section-title" data-translate="partners-title">
+                    <span class="ar">شركاؤنا</span>
+                    <span class="en" style="display:none;">Our Partners</span>
+                </h2>
+                <ul class="nav nav-tabs" id="partnerTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="partner1-tab" data-bs-toggle="tab" href="#partner1" role="tab" aria-controls="partner1" aria-selected="true" data-translate="partner1-tab">
+                            <span class="ar">نيوم</span>
+                            <span class="en" style="display:none;">NEOM</span>
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-about" href="about.html" data-translate="nav-about">من نحن</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="partner2-tab" data-bs-toggle="tab" href="#partner2" role="tab" aria-controls="partner2" aria-selected="false" data-translate="partner2-tab">
+                            <span class="ar">تبوك الدوائية</span>
+                            <span class="en" style="display:none;">Tabuk Pharma</span>
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-services" href="services.html" data-translate="nav-services">خدماتنا</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="partner5-tab" data-bs-toggle="tab" href="#partner5" role="tab" aria-controls="partner5" aria-selected="false" data-translate="partner5-tab">
+                            <span class="ar">البواني</span>
+                            <span class="en" style="display:none;">ALbwany</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="partner3-tab" data-bs-toggle="tab" href="#partner3" role="tab" aria-controls="partner3" aria-selected="false" data-translate="partner3-tab">
+                            <span class="ar">BECHTEL</span>
+                            <span class="en" style="display:none;">BECHTEL</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="partner4-tab" data-bs-toggle="tab" href="#partner4" role="tab" aria-controls="partner4" aria-selected="false" data-translate="partner4-tab">
+                            <span class="ar">نسما وشركاهم</span>
+                            <span class="en" style="display:none;">Nesma-Partners</span>
+                        </a>
                     </li>
                 </ul>
-                <div class="d-flex">
-                    <button class="btn btn-outline-primary me-2" id="language-toggle" onclick="toggleLanguage()">
-                        <span class="en">Switch to Arabic</span>
-                        <span class="ar" style="display:none;">تحويل إلى الإنجليزية</span>
-                    </button>
-                    <div class="dropdown">
-                        <button id="loginButton" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav-login">تسجيل الدخول</button>
-
-<ul class="dropdown-menu" aria-labelledby="loginButton">
-    <li>
-        <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/students/index.php?signin_tab=0" 
-           data-bs-toggle="tooltip" data-bs-placement="right" title=" الباحثين عن تدريب أو توظيف "
-           target="_blank" rel="noopener noreferrer" data-translate="students-graduates">الطلاب / خريجون</a>
-    </li>
-    <li>
-        <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/faculty/index.php?signin_tab=0" 
-           data-bs-toggle="tooltip" data-bs-placement="right" title=" كمشرف أكاديمي  من أعضاء هيئة التدريس "
-           target="_blank" rel="noopener noreferrer" data-translate="faculty">أعضاء هيئة التدريس</a>
-    </li>
-    <li>
-        <a class="dropdown-item" href="https://tabuk-csm.symplicity.com/employers/index.php?signin_tab=0" 
-           data-bs-toggle="tooltip" data-bs-placement="right" title="كشركة توظيف أو تدريب "
-           target="_blank" rel="noopener noreferrer" data-translate="companies">شركات</a>
-    </li>
-</ul>
+        
+                <div class="tab-content" id="partnerTabContent">
+                    <div class="tab-pane fade show active" id="partner1" role="tabpanel" aria-labelledby="partner1-tab">
+                        <div class="card mb-3 partner-card">
+                            <div class="row g-0">
+                                <div class="col-md-4 partner-img-container">
+                                    <img src="images/شعار-نيوم.png" alt="NEOM" class="partner-img">
+                                </div>
+                                <div class="col-md-8 partner-info">
+                                    <h3 class="card-title" data-translate="partner1-title">
+                                        <span class="ar">نيوم</span>
+                                        <span class="en" style="display:none;">NEOM</span>
+                                    </h3>
+                                    <p class="card-text" data-translate="partner1-description">
+                                        <span class="ar">وصف عن شركة NEOM. يمكن أن يتضمن هذا معلومات حول المشاريع والإنجازات.</span>
+                                        <span class="en" style="display:none;">Description about NEOM. This can include information about projects and achievements.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="tab-pane fade" id="partner2" role="tabpanel" aria-labelledby="partner2-tab">
+                        <div class="card mb-3 partner-card">
+                            <div class="row g-0">
+                                <div class="col-md-4 partner-img-container">
+                                    <img src="images/Tabuk-Pharma__1_-removebg-preview.png" alt="Tabuk Pharma" class="partner-img">
+                                </div>
+                                <div class="col-md-8 partner-info">
+                                    <h3 class="card-title" data-translate="partner2-title">
+                                        <span class="ar">تبوك الدوائية</span>
+                                        <span class="en" style="display:none;">Tabuk Pharma</span>
+                                    </h3>
+                                    <p class="card-text" data-translate="partner2-description">
+                                        <span class="ar">وصف عن شركة Tabuk Pharma. يمكن أن يتضمن هذا معلومات حول المنتجات والخدمات.</span>
+                                        <span class="en" style="display:none;">Description about Tabuk Pharma. This can include information about products and services.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="partner5" role="tabpanel" aria-labelledby="partner5-tab">
+                        <div class="card mb-3 partner-card">
+                            <div class="row g-0">
+                                <div class="col-md-4 partner-img-container">
+                                    <img src="images/OIP__2_-removebg-preview.png" alt="ALbwany" class="partner-img">
+                                </div>
+                                <div class="col-md-8 partner-info">
+                                    <h3 class="card-title" data-translate="partner5-title">
+                                        <span class="ar">البواني</span>
+                                        <span class="en" style="display:none;">ALbwany</span>
+                                    </h3>
+                                    <p class="card-text" data-translate="partner5-description">
+                                        <span class="ar">وصف عن شركة البواني. يمكن أن يتضمن هذا معلومات حول المشاريع العالمية.</span>
+                                        <span class="en" style="display:none;">Description about ALbwany. This can include information about global projects.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="tab-pane fade" id="partner3" role="tabpanel" aria-labelledby="partner3-tab">
+                        <div class="card mb-3 partner-card">
+                            <div class="row g-0">
+                                <div class="col-md-4 partner-img-container">
+                                    <img src="images/BECHTEL.jpeg" alt="BECHTEL" class="partner-img">
+                                </div>
+                                <div class="col-md-8 partner-info">
+                                    <h3 class="card-title" data-translate="partner3-title">
+                                        <span class="ar">BECHTEL</span>
+                                        <span class="en" style="display:none;">BECHTEL</span>
+                                    </h3>
+                                    <p class="card-text" data-translate="partner3-description">
+                                        <span class="ar">وصف عن شركة BECHTEL. يمكن أن يتضمن هذا معلومات حول المشاريع العالمية.</span>
+                                        <span class="en" style="display:none;">Description about BECHTEL. This can include information about global projects.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="tab-pane fade" id="partner4" role="tabpanel" aria-labelledby="partner4-tab">
+                        <div class="card mb-3 partner-card">
+                            <div class="row g-0">
+                                <div class="col-md-4 partner-img-container">
+                                    <img src="images/Nesma-Partners.png" alt="Nesma-Partners" class="partner-img">
+                                </div>
+                                <div class="col-md-8 partner-info">
+                                    <h3 class="card-title" data-translate="partner4-title">
+                                        <span class="ar">نسما وشركاهم</span>
+                                        <span class="en" style="display:none;">Nesma-Partners</span>
+                                    </h3>
+                                    <p class="card-text" data-translate="partner4-description">
+                                        <span class="ar">وصف عن شركة Nesma-Partners. يمكن أن يتضمن هذا معلومات حول المشاريع المشتركة.</span>
+                                        <span class="en" style="display:none;">Description about Nesma-Partners. This can include information about joint projects.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section" style="position: relative; height: 100vh; overflow: hidden;">
-        <video autoplay loop muted playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover; top: 50%; left: 0; transform: translateY(-50%); z-index: -1;">
-            <source src="video/ssstwitter.com_1742305446199.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-    
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                    <h5 class="display-4 fw-bold mb-4" data-translate="hero-title">
-                        <span class="ar"><small>منصة جامعة تبوك للتدريب والتوظيف</small></span>
-                        <span class="en" style="display:none;"><small>Tabuk University Platform for Training and Employment</small></span>
-                    </h5>
-                    <p class="lead mb-4" data-translate="hero-subtitle">
-                        <span class="ar" style="color: rgb(255, 255, 255); text-shadow: none;">هي بوابتك لفرص التدريب والتوظيف في سوق العمل </span>
-                        <span class="en" style="color: rgb(255, 255, 255); text-shadow: none;">Your gateway to training and employment opportunities at University of Tabuk</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="col-md-12">
-        <div class="stat-card">
-            <div class="counter-container">
-                <h3 class="counter" id="dynamicCounter">0</h3>
-                <span data-translate="visitor_count"></span>
-            </div>
-        </div>
-    </div>
-    
-
-    <!-- Features Section -->
-    <section class="features-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-translate="why-choose-us">
-                <span class="ar">لماذا تختار منصتنا؟</span>
-                <span class="en" style="display:none;">Why Choose Our Platform?</span>
-            </h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card" data-bs-toggle="tooltip" data-bs-placement="top" title="اضغط لمعرفة المزيد عن فرص التدريب">
-                        <div class="feature-icon">
-                            <i class="fas fa-lightbulb fa-2x"></i>
-                        </div>
-                        
-                        <h3 data-translate="feature-1-title">
-                            <span class="ar">فرص التدريب</span>
-                            <span class="en" style="display:none;">Training Opportunities</span>
-                        </h3>
-                        <p data-translate="feature-1-desc">
-                            <span class="ar">الوصول إلى برامج تدريبية متميزة</span>
-                            <span class="en" style="display:none;">Access to distinguished training programs</span>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 data-translate="contact-title">
+                            <span class="ar">اتصل بنا</span>
+                            <span class="en" style="display:none;">Contact Us</span>
+                        </h5>
+                        <p data-translate="address">
+                            <span class="ar">جامعة تبوك - المملكة العربية السعودية</span>
+                            <span class="en" style="display:none;">University of Tabuk - Kingdom of Saudi Arabia</span>
                         </p>
-
-                    </div>
-
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-briefcase fa-2x"></i> <!-- أيقونة جديدة تعبر عن فرص العمل -->
-                        </div>
-                        <h3 data-translate="feature-2-title">
-                            <span class="ar">فرص العمل</span>
-                            <span class="en" style="display:none;">Job Opportunities</span>
-                        </h3>
-                        <p data-translate="feature-2-desc">
-                            <span class="ar">توفير فرص عمل متميزة للخريجين</span>
-                            <span class="en" style="display:none;">Providing excellent job opportunities for graduates</span>
+                        <p data-translate="email">
+                            <span class="ar">البريد الإلكتروني: p.g.affairs@ut.edu.sa</span>
+                            <span class="en" style="display:none;">Email: p.g.affairs@ut.edu.sa</span>
                         </p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-network-wired fa-2x"></i> <!-- أيقونة جديدة تعبر عن الشبكة المهنية -->
-                        </div>
-                        <h3 data-translate="feature-3-title">
-                            <span class="ar">الإرشاد المهني</span>
-                            <span class="en" style="display:none;">Career Guidance</span>
-                        </h3>
-                        <p data-translate="feature-3-desc">
-                            <span class="ar">إرشاد مهني لمساعدتك وتطويرك</span>
-                            <span class="en" style="display:none;">Career guidance to help and develop you professionally</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-     <!-- app Section -->
-    <section class="app-section py-5">
-        <div class="container text-center">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="images/Purple Modern App Instagram Ad.png" alt="تطبيق المنصة" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-md-6">
-                    <h2 class="mb-4" data-translate="app-title"></h2>
-                    <p class="app-section" data-translate="app-description"></p>
-                    <p style="font-size: 20px;" data-translate="app-enjoy"></p>
-                    <div class="platform-icons">
-                        <a href="https://play.google.com/store/apps/details?id=com.symplicity.csmandroid.es&hl=ar" target="_blank"><img src="images/google-play-badge-en.png" alt="Android" class="platform-icon"></a> 
-                        <a href="https://apps.apple.com/us/app/symplicity-jobs-and-careers/id1239828027" target="_blank"><img src="images/apple-store-badge-en.png" class="platform-icon"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Statistics Section -->
-<section class="video-description-section py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6" style="margin-top: 80px;">
-                <h3 style="margin-top: 20px;" class="text-center mb-4" data-translate="video-title"></h3>
-                <p style="margin-top: 20px;" class="text-center mb-4" data-translate="video-subtitle"></p>
-            </div>
-            <div class="col-md-6">
-                <video width="100%" height="315" frameborder="0" allowfullscreen controls>
-                    <source src="video/تشويقي.mp4" type="video/mp4">
-                    <span data-translate="video-not-supported"></span>
-                </video>
-            </div>
-        </div>
-    </div>
-</section>
- 
-<section class="app-section py-5">
-    <div class="container text-center">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <video width="100%" height="315" frameborder="0" allowfullscreen controls>
-                    <source src="video/mp4" type="video/mp4">
-                    <span data-translate="video-not-supported"></span>
-                </video>
-            </div>
-            <div class="col-md-6">
-                <h2 class="mb-4" data-translate="mahtam-title">
-                    <span data-translate="mahtam-t">برنامج مهتم</span>
-                    <span data-translate="mahtam-t" style="display:none;">Mahtam Program</span>
-                </h2>
-                <p class="app-section" data-translate="mahtam-description">
-                    <span data-translate="sub-title" class="ar"></span>
-                    <span data-translate="sub-title" class="en" style="display:none;"> </span>
-                </p>
-                
-                <a href="#" class="btn btn-primary mt-3" target="_blank" rel="noopener noreferrer" data-translate="register-now">
-                    <span  data-translate="register-now" class="ar">سجل الآن</span>
-                    <span data-translate="register-now" class="en" style="display:none;">Register Now</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Partners Section -->
-    <section class="partners-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-4" data-translate="partners-title"></h2>
-            <ul class="nav nav-tabs justify-content-center" id="partnerTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="partner1-tab" data-bs-toggle="tab" href="#partner1" role="tab" aria-controls="partner1" aria-selected="true" data-translate="partner1-tab"></a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="partner2-tab" data-bs-toggle="tab" href="#partner2" role="tab" aria-controls="partner2" aria-selected="false" data-translate="partner2-tab"></a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="partner3-tab" data-bs-toggle="tab" href="#partner3" role="tab" aria-controls="partner3" aria-selected="false" data-translate="partner3-tab"></a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="partner4-tab" data-bs-toggle="tab" href="#partner4" role="tab" aria-controls="partner4" aria-selected="false" data-translate="partner4-tab"></a>
-                </li>
-            </ul>
-    
-            <div class="tab-content" id="partnerTabContent">
-                <div class="tab-pane fade show active" id="partner1" role="tabpanel" aria-labelledby="partner1-tab">
-                    <div class="card mb-3 partner-card">
-                        <div class="row g-0">
-                            <div class="col-md-4 d-flex align-items-center justify-content-center">
-                                <img src="images/شعار-نيوم.png" alt="NEOM" class="partner-img">
-                            </div>
-                            <div class="col-md-8 d-flex align-items-center">
-                                <div class="card-body text-center">
-                                    <h3 class="card-title" data-translate="partner1-title"></h3>
-                                    <p class="card-text" data-translate="partner1-description"></p>
-                                </div>
-                            </div>
+                    <div class="col-md-6 text-end">
+                        <h5 data-translate="follow-us">
+                            <span class="ar">تابعنا</span>
+                            <span class="en" style="display:none;">Follow Us</span>
+                        </h5>
+                        <div class="social-icons">
+                            <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-light me-3"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
-    
-                <div class="tab-pane fade" id="partner2" role="tabpanel" aria-labelledby="partner2-tab">
-                    <div class="card mb-3 partner-card">
-                        <div class="row g-0">
-                            <div class="col-md-4 d-flex align-items-center justify-content-center">
-                                <img src="images/Tabuk-Pharma.png" alt="Tabuk Pharma" class="partner-img">
-                            </div>
-                            <div class="col-md-8 d-flex align-items-center">
-                                <div class="card-body text-center">
-                                    <h3 class="card-title" data-translate="partner2-title"></h3>
-                                    <p class="card-text" data-translate="partner2-description"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="tab-pane fade" id="partner3" role="tabpanel" aria-labelledby="partner3-tab">
-                    <div class="card mb-3 partner-card">
-                        <div class="row g-0">
-                            <div class="col-md-4 d-flex align-items-center justify-content-center">
-                                <img src="images/BECHTEL.jpeg" alt="BECHTEL" class="partner-img">
-                            </div>
-                            <div class="col-md-8 d-flex align-items-center">
-                                <div class="card-body text-center">
-                                    <h3 class="card-title" data-translate="partner3-title"></h3>
-                                    <p class="card-text" data-translate="partner3-description"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="tab-pane fade" id="partner4" role="tabpanel" aria-labelledby="partner4-tab">
-                    <div class="card mb-3 partner-card">
-                        <div class="row g-0">
-                            <div class="col-md-4 d-flex align-items-center justify-content-center">
-                                <img src="images/Nesma-Partners.png" alt="Nesma-Partners" class="partner-img">
-                            </div>
-                            <div class="col-md-8 d-flex align-items-center">
-                                <div class="card-body text-center">
-                                    <h3 class="card-title" data-translate="partner4-title"></h3>
-                                    <p class="card-text" data-translate="partner4-description"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
             </div>
-        </div>
-    </section>
+        </footer>
     
-     <!-- news Section -->
-     
-
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 data-translate="contact-title">
-                        <span class="ar">اتصل بنا</span>
-                        <span class="en" style="display:none;">Contact Us</span>
-                    </h5>
-                    <p data-translate="address">
-                        <span class="ar">جامعة تبوك - المملكة العربية السعودية</span>
-                        <span class="en" style="display:none;">University of Tabuk - Kingdom of Saudi Arabia</span>
-                    </p>
-                    <p data-translate="email">
-                        <span class="ar">البريد الإلكتروني: p.g.affairs@ut.edu.sa </span>
-                        <span class="en" style="display:none;">Email: p.g.affairs@ut.edu.sa</span>
-                    </p>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            // تأثير التمرير للنافبار
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.querySelector('.navbar').classList.add('scrolled');
+                } else {
+                    document.querySelector('.navbar').classList.remove('scrolled');
+                }
+            });
+            
+            // تأثير الظهور عند التمرير
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
                     
-                </div>
-                <div class="col-md-4">
-                    <h5 data-translate="follow-us">
-                        <span class="ar">تابعنا</span>
-                        <span class="en" style="display:none;">Follow Us</span>
-                    </h5>
-                    <div class="social-icons">
-                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-telegram"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        gsap.to(".partners-carousel .partners-wrapper", {
-            x: -1000,
-            duration: 10,
-            repeat: -1,
-            ease: "none"
-        });
-    </script>
-</body>
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animated');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', animateOnScroll);
+            window.addEventListener('load', animateOnScroll);
+            document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.tab');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      // إزالة التنشيط من جميع الألسنة
+      tabs.forEach(t => t.classList.remove('active'));
+      
+      // إضافة التنشيط للسان المحدد
+      this.classList.add('active');
+      
+      // إخفاء جميع المحتويات
+      document.querySelectorAll('.content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      // إظهار المحتوى المرتبط بالسان المحدد
+      const tabId = this.getAttribute('data-tab');
+      document.getElementById(`${tabId}-content`).classList.add('active');
+    });
+  });
+});
+            
+        </script>
+    </body>
 </html>
